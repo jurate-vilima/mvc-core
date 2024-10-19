@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace JurateVilima\MvcFramework;
 
 abstract class Controller {
     protected View $view;

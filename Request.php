@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace JurateVilima\MvcFramework;
 
 class Request {
     public function getPath() {

@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace JurateVilima\MvcFramework;
 
 class Response {
     public function setErrorCode(int $code) {

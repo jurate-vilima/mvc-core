@@ -2,7 +2,7 @@
     "name": "jurate-vilima/mvc-framework",
     "autoload": {
         "psr-4": {
-            "JurateVilima\\MvcFramework\\": "src/"
+            "JurateVilima\\MvcFramework\\": "."
         }
     },
     "authors": [
