@@ -1,0 +1,15 @@
+{
+    "name": "jurate-vilima/mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "JurateVilima\\MvcFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jurate Vilima",
+            "email": "jurate.vilima@gmail.com"
+        }
+    ],
+    "require": {}
+}
