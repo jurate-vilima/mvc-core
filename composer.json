@@ -1,8 +1,8 @@
 {
-    "name": "jurate-vilima/mvc-framework",
+    "name": "jurate-vilima/mvc-core",
     "autoload": {
         "psr-4": {
-            "JurateVilima\\MvcFramework\\": "."
+            "JurateVilima\\MvcCore\\": "."
         }
     },
     "authors": [
