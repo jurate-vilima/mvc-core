@@ -1,5 +1,5 @@
 <?php
-namespace JurateVilima\MvcFramework\middlewares;
+namespace JurateVilima\MvcCore\middlewares;
 
  class BaseMiddleware {
     public const MAP = [

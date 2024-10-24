@@ -1,5 +1,5 @@
 <?php
-namespace JurateVilima\MvcFramework;
+namespace JurateVilima\MvcCore;
 
 class Session
 {

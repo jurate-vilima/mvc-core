@@ -1,7 +1,7 @@
 <?php
-namespace JurateVilima\MvcFramework\middlewares;
+namespace JurateVilima\MvcCore\middlewares;
 
-use JurateVilima\MvcFramework\Application;
+use JurateVilima\MvcCore\Application;
 
 class Guest extends BaseMiddleware {
     public function handle() {

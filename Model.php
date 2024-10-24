@@ -1,5 +1,5 @@
 <?php
-namespace JurateVilima\MvcFramework;
+namespace JurateVilima\MvcCore;
 
 abstract class Model {
     public $errors = [];
@@ -116,39 +116,5 @@ abstract class Model {
         Application::$app->db->insertRecord($tableName, $valueArr);
         Application::$app->session->setFlash('success', 'You registered successfuly!');  
     }
-    // public function save() {
-    //     $tableName = $this->tableName();
-    //     $attributesToSave = $this->getDbAttributes();
-    //     var_dump($attributesToSave);
-    
-    //     // Hash the password if present
-    //     // if (isset($attributesToSave['password'])) {
-    //     //     $attributesToSave['password'] = password_hash($attributesToSave['password'], PASSWORD_BCRYPT);
-    //     // }
-    
-    //     // Prepare the column and placeholder strings
-    //     $columns = implode(',',$attributesToSave);   // e.g., username,password
-        
-    //     $placeholders = array_map(fn($attribute) => ":$attribute", $attributesToSave);
-    //     $placeholders = implode(',', $placeholders);  // e.g., :username,:password
-    
-    //     // Generate the SQL statement
-    //     $sql = "INSERT INTO $tableName ($columns) VALUES ($placeholders)";
-    //     var_dump($sql);
-    //     $stmt = Application::$app->db->pdo->prepare($sql);
-    
-    //     // Bind each value to the corresponding placeholder
-    //     foreach ($attributesToSave as $attribute) {
-    //         var_dump($attribute);
-    //         $stmt->bindValue(":$attribute", $this->$attribute);
-    //     }
-    
-    //     // Execute the query and handle errors
-    //     try {
-    //         $stmt->execute();
-    //         Application::$app->session->setFlash('success', 'You registered successfuly!');
-    //     } catch (\PDOException $e) {
-    //         throw new \Exception('Database error: ' . $e->getMessage());
-    //     }
-    // }
+   
 }

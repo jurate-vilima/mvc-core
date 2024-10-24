@@ -1,5 +1,5 @@
 <?php
-namespace JurateVilima\MvcFramework;
+namespace JurateVilima\MvcCore;
 
 class Application {
     public static Application $app;

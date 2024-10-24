@@ -1,7 +1,7 @@
 <?php
-namespace JurateVilima\MvcFramework\exceptions;
+namespace JurateVilima\MvcCore\exceptions;
 
-use JurateVilima\MvcFramework\Application;
+use JurateVilima\MvcCore\Application;
 
 class ForbiddenAccess extends \Exception {
     public function __construct() {

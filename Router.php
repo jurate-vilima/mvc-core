@@ -1,8 +1,8 @@
 <?php
-namespace JurateVilima\MvcFramework;
+namespace JurateVilima\MvcCore;
 
-use JurateVilima\MvcFramework\exceptions\ForbiddenAccess;
-use JurateVilima\MvcFramework\middlewares\BaseMiddleware;
+use JurateVilima\MvcCore\exceptions\ForbiddenAccess;
+use JurateVilima\MvcCore\middlewares\BaseMiddleware;
 
 class Router {
     private Request $request;

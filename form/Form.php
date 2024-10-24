@@ -1,5 +1,5 @@
 <?php
-namespace JurateVilima\MvcFramework\form;
+namespace JurateVilima\MvcCore\form;
 
 class Form {
     public $model;
