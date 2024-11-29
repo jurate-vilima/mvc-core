@@ -6,7 +6,7 @@ function getPageTitles() {
         'login' => 'Ielogoties sistēmā', 
         'register' => 'Reģistrācija',
         'contacts' => 'Kontakti',
-        'home' => 'Galvenā lapa',
+        'pages/home' => 'Galvenā lapa',
         'profile' => 'Profils',
     ];
 } 
