@@ -11,9 +11,9 @@ class View {
 
     public function renderPage($view, $params = [], $layout = 'main') {
         $this->curPageTitle = $this->pageTitles[$view];
-        var_dump($this->curPageTitle);
+
         $content = $this->getView($view, $params);
-        $layoutPath = Application::$ROOT_DIR . "/views/layouts/$layout.php";
+        $layoutPath = Application::$ROOT_DIR . "/views/layout/$layout.php";
 
         if(file_exists($layoutPath))
             include_once $layoutPath;
