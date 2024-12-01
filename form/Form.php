@@ -3,17 +3,27 @@ namespace JurateVilima\MvcCore\form;
 
 class Form {
     public $model;
+    private $className;
 
     public function __construct($model) {
         $this->model = $model;
+        $this->className = "{$this->model->id}-form";
     }
 
-    public static function begin($action, $method) {
+    public function begin($action, $method) {
         echo "<form action='$action' method='$method'>";
     }
 
     public static function end() {
         echo "</form>";
+    }
+
+    public function getFormClass() {
+        return $this->className;
+    }
+
+    public function getFormName() {
+        return "<h2 class='form__title'>{$this->model->formName}</h2>";
     }
 
     public function createField($attribute, $fieldType = "input", $inputType = "text") {
@@ -44,11 +54,11 @@ class Form {
     }
 
     private function createTextbox($attribute, $class, $oldValue, $inputType) {
-        return "<input name='$attribute' type='$inputType' value='$oldValue' class='form-control $class' id='$attribute' aria-describedby='{$attribute}Help'>";
+        return "<input name='$attribute' type='$inputType' value='$oldValue' class='form__input' id='$attribute'>";
     }
 
     private function createTextarea($attribute, $class, $oldValue) {
-        return "<textarea name='$attribute' class='form-control $class' aria-label='With textarea'>
+        return "<textarea name='$attribute' class='form__textarea'>
                     $oldValue
                 </textarea>";
     }
@@ -56,8 +66,8 @@ class Form {
     private function createFieldHtml($inputInfo) {
         extract($inputInfo);
 
-        $fieldHtml = "<div class='mb-3'>
-                    <label for='$attribute' class='form-label'>$label</label>";
+        $fieldHtml = "<div class='form__item'>
+                    <label for='$attribute'>$label</label>";
   
         $class = isset($class) ? $class : '';
         $error = isset($error) ? $error : '';
@@ -72,7 +82,7 @@ class Form {
                         break;
         };
 
-        $fieldHtml .= "     <div class='invalid-feedback'>
+        $fieldHtml .= "     <div class='form__message invalid-feedback'>
                                 $error
                             </div>
                         </div>";
