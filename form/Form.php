@@ -82,10 +82,12 @@ class Form {
                         break;
         };
 
-        $fieldHtml .= "     <div class='form__message invalid-feedback'>
-                                $error
-                            </div>
-                        </div>";
+        $fieldHtml .= "</div>";
+        
+                        // $fieldHtml .= "     <div class='form__message invalid-feedback'>
+                        //         $error
+                        //     </div>
+                        // </div>";
         
         return $fieldHtml;
     }
